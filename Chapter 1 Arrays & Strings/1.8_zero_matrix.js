@@ -11,7 +11,7 @@ Iterate through n range
          Set matrix at index to 0
 */
 
-/* Code 1 */
+/* Code 1 O(nm), O(n+m)*/ 
 function zeroMatrix(matrix) {
    const zeroRow = Array(matrix.length).fill(false);
    const zeroCol = Array(matrix[0].length).fill(1);
@@ -24,7 +24,7 @@ function zeroMatrix(matrix) {
       }
    }
    for(let r = 0; r < zeroRow.length; r++) {
-      for(let x = 0; c < zeroCol.length; c++) {
+      for(let c = 0; c < zeroCol.length; c++) {
          if(zeroRow[r] || zeroCol[c]) {
             matrix[r][c] = 0;
          }
